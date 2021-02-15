@@ -1,0 +1,32 @@
+This file is part of the WorkMATe source code, provided as supplemental material
+for the article:
+    "Flexible Working Memory through Selective Gating and Attentional Tagging"
+Wouter Kruijne, Sander M Bohte, Pieter R Roelfsema, Christian N L Olivers
+
+Questions or comments regarding this file can be addressed to w.kruijne@vu.nl
+
+All files have been written and tested in Python 2.7, and make use of the modules:
+- numpy
+- scipy
+- itertools
+- string
+
+runner.py
+---------
+The main entry point for simulatons: this file implements functions to train agents on the task until they have converged.
+
+tasks.py
+--------
+This file implements the four environments that constitute 'tasks' for WorkMATe agents to learn.
+
+inputs.py
+---------
+This file specifies the mapping between the inputs offered in different tasks, and their vector representation  that can be processed by a neural network.
+
+workmate.py
+-----------
+This file contains a class that defines the WorkMATe agent, how it processes stimuli on a trial and how it learns.
+
+workmate_PG.py
+--------------
+This file implements a specific type of WorkMATe agent that can be used on the Pro-/Antisaccade task. In the article, this version is used to illustrate the added complexity of learning a gating policy. This version of WorkMATe uses a prespecified set of gating actions that are not affected by learning.
